@@ -14,6 +14,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     date = models.DateTimeField()
     Content = models.TextField(max_length=15000)
+    author = models.ForeignKey(Author,related_name='post_Author',on_delete=models.CASCADE)
     
     
     
